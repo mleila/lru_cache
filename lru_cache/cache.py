@@ -93,4 +93,6 @@ class LRUCache:
         '''
         Remove all items from cache
         '''
-        self.__init__()
+        self.size = 0
+        self.dict = {}
+        self.dll = DoubleLinkedList()
