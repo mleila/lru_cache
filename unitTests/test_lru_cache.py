@@ -31,6 +31,21 @@ class LRUTest(unittest.TestCase):
         self.assertEqual(lru.dll.values[0], 4)
 
 
+    def test_lru_reset(self):
+        '''
+        Test LRU reset method
+        '''
+        lru = LRUCache(capacity=3)
+
+        lru.put('1', 1)
+        lru.put('2', 2)
+
+        lru.reset_cache()
+
+        self.assertEqual(lru.dll.values, [])
+
+
+
 
 
 if __name__ == '__main__':
